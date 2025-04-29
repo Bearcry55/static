@@ -25,8 +25,8 @@ async fn add_cors(request: Request, next: Next) -> Response {
 
 async fn serve_login_page() -> Html<String> {
     // Determine the correct path for static files
-    let static_path = if Path::new("target/static/index.html").exists() {
-        "target/static/index.html"
+    let static_path = if Path::new("static/index.html").exists() {
+        "static/index.html"
     } else {
         // Fallback path for production
         "static/index.html"
