@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: your-app-name
+    env: rust
+    buildCommand: cargo build --release
+    startCommand: ./target/release/local
+    envVars:
+      - key: PORT
+        value: 10000
